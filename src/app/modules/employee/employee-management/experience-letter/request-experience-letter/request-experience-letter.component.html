@@ -1,0 +1,63 @@
+<!-- request leave start -->
+<div class="row">
+  <div class="col-md-11">
+    <div class="card">
+      <!-- card header start -->
+      <div class="card-header">
+        <h5 class="card-title"></h5>
+      </div>
+      <!-- card-header end -->
+      <!-- card body start -->
+      <div class="card-body">
+        <div class="card">
+          <!-- form start -->
+          <form role="form">
+            <div class="container-fluid">
+              <!-- card body start -->
+              <div class="margin-gap">
+              <div class="row">
+                <div class="col-md-6">
+                    <!--basic project start-->
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Number of copies </label>
+                      <select class="form-control" name="no-of-copies" [(ngModel)]="experienceLetterRequestObj.noOfCopy">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="request-reason">Reason</label>
+                      <textarea [(ngModel)]="experienceLetterRequestObj.reason" name="request-reason" class="form-control" rows="2" cols="10"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="competency">Competency</label>
+                        <textarea [(ngModel)]="experienceLetterRequestObj.competency" name="competency" class="form-control" rows="7" cols="10"></textarea>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card body end -->
+            </div>
+          </form>
+          <!-- form end -->
+        </div>
+      </div>
+      <!-- card body end -->
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal" (click)="createRequest()">Request</button>
+        &nbsp;
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- <app-add></app-add> -->
+
+
+<!-- request leave end -->
