@@ -9,13 +9,12 @@
         <div class="modal-body">
           <div class="col-md-12">
             <!-- form start -->
-            <form role="form">
+            <form role="form" #roleForm="ngForm">
   
               <!-- card body start -->
               <div class="form-group">
-                <label>Leave A Message</label>
-                <textarea class="form-control">
-                </textarea>
+                <label>Do You Want Accept</label>
+                
               </div>
   
             </form>
@@ -23,7 +22,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="updateSelfServiceByUser()">Ok</button>
         </div>
       </div>
       <!-- modal content end -->

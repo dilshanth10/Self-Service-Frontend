@@ -1,5 +1,10 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
+import { SelfServiceService } from 'src/app/services/self-service.service';
+import { DataSource } from '@angular/cdk/table';
+import { Observable } from 'rxjs';
+import { SelfServiceUser } from 'src/app/model/self-service-user';
+import { SelfService } from 'src/app/model/self-service';
 
 
 @Component({
@@ -9,31 +14,28 @@ import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 })
 export class ViewIndividualsComplainsHistoryComponent implements OnInit {
 
+  dataSource = new SelfServiceUserDataSource(this.selfServiceService)
   displayedColumns: string[] = ['date', 'type','status','description','reply'];
-history=[]
-  // history = [
-  //   { 'date':'12/1/2018', 'type':'Complaint', 'status':'Accepted', 'description' :'attach', 'reply':'jhbj'},
-  //   { 'date':'12/1/2018', 'type':'Request', 'status':'Rejected', 'description' :'attach','reply':'jhbj'}
-  // ]
-  dataSource = new MatTableDataSource<any>(this.history);
+
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() { }
+  constructor(private selfServiceService:SelfServiceService) { }
 
   ngOnInit() {
-    this.dataSource = new MatTableDataSource<any>(this.history);
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+  
   }
 
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+}
 
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
+
+export class SelfServiceUserDataSource extends DataSource<any>{
+  constructor(private selfServiceService:SelfServiceService){
+    super();
   }
-
-
+  connect():Observable<SelfService[]>{
+    return this.selfServiceService.getSelfServiceByUser(1);
+  }
+  disconnect(){}
 }

@@ -26,5 +26,12 @@ export class SelfServiceService {
   public createComplain(selfService: SelfService){
     return this.http.post<SelfService>(this.selfServiceAPI, selfService)
   }
+
+  public getSelfServiceByUser(userId: number){
+    return this.http.get<SelfService[]>(this.selfServiceAPI + "/" + userId)
+  }
+  public updateSelfServiceByUser(selfService) {
+    return this.http.put<SelfService>(this.selfServiceAPI + "/" + selfService.id, selfService);
+  }
   
 }
