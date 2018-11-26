@@ -56,11 +56,8 @@ export class AddIndividualsComplainsComponent implements OnInit {
     )
   }
 
-
   createComplain() {
     this.selfServiceObj.user = 1;
-    // return this.selfServiceService.createComplain(this.selfServiceObj).subscribe(data => {
-    //   console.log(this.selfServiceObj);
     this.selfServiceService.createComplain(this.selfServiceObj).subscribe(data => {
       console.log(data);
     })

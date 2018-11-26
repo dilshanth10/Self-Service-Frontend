@@ -32,6 +32,7 @@ export class EditTypeComponent implements OnInit {
       console.log(data);
     })
   }
+  
   updateSelfServiceType() {
     this.selfServiceTypeService.updateSelfServiceType(this.selfServiceTypeObj).subscribe(data => {
       console.log(data);

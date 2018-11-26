@@ -9,32 +9,29 @@ import { SelfService } from 'src/app/models/self-service/self-service';
   styleUrls: ['./accept-request.component.css']
 })
 export class AcceptRequestComponent implements OnInit {
-  
-
   constructor(private selfServiceService: SelfServiceService, private interactionService:InteractionService) { }
   selfService: SelfService[];
   selfServiceObj = new SelfService();
  msg: any;
   ngOnInit() {
-    this.getSelfServiceByUser();
+    this.getSelfServiceFromSelfServiceInteraction();
+
+    this.interactionService.selfServiceDataSource$.subscribe(data =>{
+      this.selfServiceObj = data;
+    })
   }
-  getSelfServiceByUser() {
-    return this.selfServiceService.getSelfServiceByUser(1).subscribe(
-      data => {
-        this.selfService = data;
-      console.log(data);
-      }
-    )
+
+  getSelfServiceFromSelfServiceInteraction(){
+    this.interactionService.selfServiceDataSource$.subscribe(data => {
+      this.selfServiceObj=data;
+    })
   }
-  updateId(selfService) {
-    console.log(selfService);
-    this.selfServiceObj = Object.assign({}, this.selfServiceObj);
-  }
-  updateSelfServiceByUser() {
+  
+  sendSelfServiceObjToAccept() {
+    alert("test");
+    console.log(this.selfServiceObj);
     this.selfServiceService.updateSelfServiceByUser(this.selfServiceObj).subscribe(data => {
-      console.log(data);
       this.msg = "Data updated successfully";
-      this.getSelfServiceByUser();
     })
   }
 
