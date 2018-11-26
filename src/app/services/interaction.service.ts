@@ -3,6 +3,8 @@ import { SelfServiceType } from './../models/self-service/self-service-type';
 import { Injectable } from '@angular/core';
 import { Subject, BehaviorSubject } from 'rxjs';
 import { SelfService } from 'src/app/models/self-service/self-service';
+import { Response } from '../models/self-service/response';
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,21 +22,21 @@ export class InteractionService {
 
   loggedInSource$ = this.loggedInSource.asObservable();
   selfServiceTypeDataSource$ = this.selfServiceTypeDataSource.asObservable();
-  selfServiceDataSource$= this.selfServiceDataSource.asObservable();
-  responseDataSource$=this.responseDataSource.asObservable();
+  selfServiceDataSource$ = this.selfServiceDataSource.asObservable();
+  responseDataSource$ = this.responseDataSource.asObservable();
 
   sendLogin(loggedIn: string) {
     this.loggedInSource.next(loggedIn);
   }
-  sendSelfServiceType(selfServiceType:SelfServiceType){
+  sendSelfServiceType(selfServiceType: SelfServiceType) {
     return this.selfServiceTypeDataSource.next(selfServiceType);
   }
-  sendSelfService(selfService:SelfService){
+  sendSelfService(selfService: SelfService) {
     return this.selfServiceDataSource.next(selfService);
   }
-sendResponseService(response:Response){
-  return this.responseDataSource.next(response);
-}
+  sendResponseService(response: Response) {
+    return this.responseDataSource.next(response);
+  }
 
   upadateMsg(msg: string) {
     this.msgDataSource.next(msg);

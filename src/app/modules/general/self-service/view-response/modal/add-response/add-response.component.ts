@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ResponseService } from 'src/app/services/self-service/response.service';
+import { Response } from 'src/app/models/self-service/response';
 
 @Component({
   selector: 'app-add-response',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddResponseComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private responseService:ResponseService) { }
+ 
+  responseObj=new Response;
+  msg:any;
   ngOnInit() {
   }
-
+  createResponse() {
+    this.responseService.createResponse(this.responseObj).subscribe(data=>{
+      console.log(data);
+    })
+  }
+  sendResponseObjToAccept() {
+    console.log(this.responseObj);
+    this.responseService.createResponse(this.responseObj).subscribe(data => {
+    
+    })
+  }
 }

@@ -1,13 +1,9 @@
 export class Response {
     id: number;
-    selfServiceType: number;
-    user: number;
+    selfService: number;
     relevantDepartment: number;
     relevantIndividual: number;
-    informIndividual: boolean;
-    description: string;
-    attachment: string;
-    createdAt: Date;
-    status: string;
-    message: string;
+    responseMessage:String;
+    attachment:string;
+    createdAt:Date;
 }

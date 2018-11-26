@@ -25,7 +25,10 @@
 
             <ng-container matColumnDef="fullName">
               <mat-header-cell *matHeaderCellDef mat-sort-header> Employee Name </mat-header-cell>
-              <mat-cell *matCellDef="let response"> {{response.selfService.user.fullName}}</mat-cell>
+              <mat-cell *matCellDef="let response"> {{response.user.fullName}}
+                <div class="icon-font" data-toggle="modal" data-target="#view-employee"><i class="fa fa-eye"></i></div>
+              </mat-cell>
+
             </ng-container>
 
             <ng-container matColumnDef="createdAt">
@@ -35,7 +38,7 @@
 
             <ng-container matColumnDef="selfServiceTypeName">
               <mat-header-cell *matHeaderCellDef mat-sort-header> Type </mat-header-cell>
-              <mat-cell *matCellDef="let response"> {{response.selfService.selfServiceType.selfServiceTypeName}}</mat-cell>
+              <mat-cell *matCellDef="let response"> {{response.selfServiceType.selfServiceTypeName}}</mat-cell>
             </ng-container>
 
             <ng-container matColumnDef="status">
@@ -45,7 +48,7 @@
 
             <ng-container matColumnDef="description">
               <mat-header-cell *matHeaderCellDef mat-sort-header> Description</mat-header-cell>
-              <mat-cell *matCellDef="let response"> {{response.responseMessage}}</mat-cell>
+              <mat-cell *matCellDef="let response"> {{response.description}}</mat-cell>
             </ng-container>
 
             <ng-container matColumnDef="responseview">
@@ -71,3 +74,39 @@
 </div>
 
 <app-add-response></app-add-response>
+
+
+<div id="view-employee" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- modal content start -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title"> Employee Info</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-12">
+            <!-- form start -->
+            <form role="form">
+              <!-- card body start -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="end-date">Full Name: Natsu</label><br/>
+                    <label for="end-date">Full Name: Natsu</label> <br/>
+                    <label for="end-date">Full Name: Natsu</label><br/>
+                    <label for="end-date">Full Name: Natsu</label><br/>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <!-- form end -->
+          </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+      <!-- modal content end -->
+    </div>
+  </div>
