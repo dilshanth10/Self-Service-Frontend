@@ -47,8 +47,8 @@ export class SelfServiceTypeComponent implements OnInit {
   deleteSelfServiceType() {
     this.selfServiceTypeService.deleteSelfServiceType(this.selfServiceTypeObj).subscribe(data => {
       console.log(data);
-      this.msg = "Delated successfully";
       this.getSelfServiceType();
+      this.msg = "Delated successfully";
     })
   }
 
