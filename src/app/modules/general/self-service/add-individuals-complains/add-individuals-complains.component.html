@@ -45,20 +45,16 @@
                             [(ngModel)]="selfServiceObj.createdAt" name="createdAt">
                         </div>
 
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Description</label>
-                          <textarea class="form-control" rows="3" cols="10" [(ngModel)]="selfServiceObj.description"
-                            name="description"></textarea>
-                        </div>
+                       
                       </div>
 
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="exampleInputEmail1">Relevant Individual </label>
-                          <input name="funame" list="funame" class=" form-control" [(ngModel)]="selfServiceObj.userId">
-                          <datalist id="funame">
+                          <input name="funame" list="options" class=" form-control" [(ngModel)]="selfServiceObj.relevantIndividual">
+                          <datalist id="options">
                             <option selected disabled>Select a Relevant Individual</option>
-                            <option *ngFor="let user of users" value="{{user.fullName}}"></option>
+                            <option *ngFor="let user of users" data-value="{{user.id}}">{{user.fullName}}</option>
                           </datalist>
                         </div>
 
@@ -71,20 +67,26 @@
                             </mat-radio-group>
                           </div>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                           <label for="exampleInputEmail1">Individual Involved </label>
                           <input name="funame" list="funame" class=" form-control" [(ngModel)]="selfServiceObj.userId">
                           <datalist id="funame">
                             <option selected disabled>Select a Relevant Individual</option>
                             <option *ngFor="let user of users" value="{{user.fullName}}"></option>
                           </datalist>
-                        </div>
+                        </div> -->
                         <!-- <div class="form-group">
                           <label for="exampleInputEmail1">Individual Involved </label>
                           <input type="Number of copies " class="form-control" placeholder="Individual name"
                             [(ngModel)]="selfServiceObj.relevantIndividual" name="relevantIndividual ">
                         </div> -->
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Description</label>
+                            <textarea class="form-control" rows="3" cols="10" [(ngModel)]="selfServiceObj.description"
+                              name="description"></textarea>
+                          </div>
                       </div>
+                      
                     </div>
                   </fieldset>
                 </div>
@@ -102,4 +104,5 @@
   </div>
 </div>
 <div>
+  {{selfServiceObj | json}}
 </div>

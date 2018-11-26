@@ -27,7 +27,7 @@ export class ViewIndividualsComplainsComponent implements OnInit {
   }
 
   getSelfServiceByUser() {
-    return this.selfServiceService.getSelfServiceByUser(1).subscribe(
+    return this.selfServiceService.getSelfServiceByPendingStatus().subscribe(
       data => {
         this.selfService = data;
       console.log(data);

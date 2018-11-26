@@ -16,10 +16,12 @@ export class InteractionService {
   private selfServiceTypeDataSource = new Subject<SelfServiceType>();
   private msgDataSource = new Subject<string>();
   private selfServiceDataSource = new Subject<SelfService>();
+  private responseDataSource = new Subject<Response>();
 
   loggedInSource$ = this.loggedInSource.asObservable();
   selfServiceTypeDataSource$ = this.selfServiceTypeDataSource.asObservable();
   selfServiceDataSource$= this.selfServiceDataSource.asObservable();
+  responseDataSource$=this.responseDataSource.asObservable();
 
   sendLogin(loggedIn: string) {
     this.loggedInSource.next(loggedIn);
@@ -30,6 +32,10 @@ export class InteractionService {
   sendSelfService(selfService:SelfService){
     return this.selfServiceDataSource.next(selfService);
   }
+sendResponseService(response:Response){
+  return this.responseDataSource.next(response);
+}
+
   upadateMsg(msg: string) {
     this.msgDataSource.next(msg);
   }

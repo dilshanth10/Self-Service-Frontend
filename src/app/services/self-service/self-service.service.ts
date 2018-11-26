@@ -33,5 +33,9 @@ export class SelfServiceService {
   public updateSelfServiceByUser(selfService) {
     return this.http.put<SelfService>(this.selfServiceAPI + "/" + selfService.id, selfService);
   }
+
+  public getSelfServiceByPendingStatus(){
+    return this.http.get<SelfService[]>(this.selfServiceAPI + "/status/Pending");
+  }
   
 }
