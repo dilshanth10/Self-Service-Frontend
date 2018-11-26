@@ -1,6 +1,6 @@
 import { ExperienceLetterRequestService } from './../../../../../services/experience-letter-request.service';
 import { Component, OnInit } from '@angular/core';
-import { ExperienceLetterRequest } from 'src/app/model/experience-letter-request';
+import { ExperienceLetterRequest } from 'src/app/models/experience-letter-request';
 
 @Component({
   selector: 'app-request-experience-letter',

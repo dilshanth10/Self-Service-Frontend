@@ -17,7 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { SelfServiceTypeComponent } from './self-service-type/self-service-type.component';
 import { EditTypeComponent } from './self-service-type/model/edit-type/edit-type.component';
 import { DeletTypeComponent } from './self-service-type/model/delet-type/delet-type.component';
-import { SelfServiceService } from 'src/app/services/self-service.service';
+import { SelfServiceService } from 'src/app/services/self-service/self-service.service';
 
 const routes:Routes=[
   {

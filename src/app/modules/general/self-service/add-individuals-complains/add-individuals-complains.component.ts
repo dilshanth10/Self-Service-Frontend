@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { SelfService } from 'src/app/model/self-service';
-import { SelfServiceService } from 'src/app/services/self-service.service';
-import { Department } from 'src/app/model/department';
-import { SelfServiceType } from 'src/app/model/self-service-type';
-import { SelfServiceTypeService } from 'src/app/services/self-service-type.service';
-import { UserService } from 'src/app/services/user.service';
-import { User } from 'src/app/model/user';
+import { SelfService } from 'src/app/models/self-service/self-service';
+import { SelfServiceService } from 'src/app/services/self-service/self-service.service';
+import { Department } from 'src/app/models/self-service/department';
+import { SelfServiceType } from 'src/app/models/self-service/self-service-type';
+import { SelfServiceTypeService } from 'src/app/services/self-service/self-service-type.service';
+import { UserService } from 'src/app/services/self-service/user.service';
+import { User } from 'src/app/models/self-service/user';
 
 @Component({
   selector: 'app-add-individuals-complains',

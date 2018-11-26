@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { SelfServiceService } from 'src/app/services/self-service.service';
-import { SelfService } from 'src/app/model/self-service';
-import { UserService } from 'src/app/services/user.service';
+import { SelfServiceService } from 'src/app/services/self-service/self-service.service';
+import { SelfService } from 'src/app/models/self-service/self-service';
+import { UserService } from 'src/app/services/self-service/user.service';
 
 @Component({
   selector: 'app-view-individuals-complains',

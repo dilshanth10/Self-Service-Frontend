@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { SelfServiceType } from '../model/self-service-type';
+import { SelfServiceType } from 'src/app/models/self-service/self-service-type';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })

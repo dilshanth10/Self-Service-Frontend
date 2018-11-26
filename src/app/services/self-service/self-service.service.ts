@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SelfService } from '../model/self-service';
-import { Department } from '../model/department';
+import { Department } from 'src/app/models/self-service/department';
 import { Observable } from 'rxjs';
-import { SelfServiceUser } from '../model/self-service-user';
+import { SelfServiceUser } from 'src/app/models/self-service/self-service-user';
+import { SelfService } from 'src/app/models/self-service/self-service';
 
 @Injectable({
   providedIn: 'root'

@@ -1,8 +1,7 @@
+import { SelfServiceService } from 'src/app/services/self-service/self-service.service';
+import { SelfServiceType } from './../models/self-service/self-service-type';
 import { Injectable } from '@angular/core';
 import { Subject, BehaviorSubject } from 'rxjs';
-import { SelfServiceService } from './self-service.service';
-import { SelfServiceType } from '../model/self-service-type';
-import { SelfService } from '../model/self-service';
 
 @Injectable({
   providedIn: 'root'

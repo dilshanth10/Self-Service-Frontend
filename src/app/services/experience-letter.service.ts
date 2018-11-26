@@ -1,4 +1,4 @@
-import { ExperienceLetter } from './../model/experience-letter';
+import { ExperienceLetter } from 'src/app/models/experience-letter';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 

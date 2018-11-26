@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
-import { SelfServiceService } from 'src/app/services/self-service.service';
+import { SelfServiceService } from 'src/app/services/self-service/self-service.service';
 import { DataSource } from '@angular/cdk/table';
-import { SelfServiceUser } from 'src/app/model/self-service-user';
+import { SelfServiceUser } from 'src/app/models/self-service/self-service-user';
 import { Observable } from 'rxjs';
 
 

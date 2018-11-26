@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SelfServiceType } from 'src/app/model/self-service-type';
-import { SelfServiceTypeService } from 'src/app/services/self-service-type.service';
+import { SelfServiceType } from 'src/app/models/self-service/self-service-type';
+import { SelfServiceTypeService } from 'src/app/services/self-service/self-service-type.service';
 import { InteractionService } from 'src/app/services/interaction.service';
 
 

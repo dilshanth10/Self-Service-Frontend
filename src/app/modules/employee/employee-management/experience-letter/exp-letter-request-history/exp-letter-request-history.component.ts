@@ -1,7 +1,7 @@
 import { ExperienceLetterService } from 'src/app/services/experience-letter.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
-import { ExperienceLetter } from 'src/app/model/experience-letter';
+import { ExperienceLetter } from 'src/app/models/experience-letter';
 
 @Component({
   selector: 'app-exp-letter-request-history',

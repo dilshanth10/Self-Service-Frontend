@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ExperienceLetterRequest } from '../model/experience-letter-request';
+import { ExperienceLetterRequest } from 'src/app/models/experience-letter-request';
 
 @Injectable({
   providedIn: 'root'

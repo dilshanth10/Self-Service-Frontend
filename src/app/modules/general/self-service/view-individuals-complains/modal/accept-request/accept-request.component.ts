@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { InteractionService } from 'src/app/services/interaction.service';
-import { SelfServiceService } from 'src/app/services/self-service.service';
-import { SelfService } from 'src/app/model/self-service';
+import { SelfServiceService } from 'src/app/services/self-service/self-service.service';
+import { SelfService } from 'src/app/models/self-service/self-service';
 
 @Component({
   selector: 'app-accept-request',

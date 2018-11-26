@@ -1,6 +1,6 @@
-import { User } from './../../../../../model/user';
-import { UserService } from './../../../../../services/user.service';
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/self-service/user';
+import { UserService } from 'src/app/services/self-service/user.service';
 
 @Component({
   selector: 'app-generate-experience-letter',
